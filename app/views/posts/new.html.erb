@@ -1,0 +1,13 @@
+<h1> 新規投稿ページ</h1>
+
+<%# 通常のHTML %>
+<%# <form action="/posts" method="post">
+  <input type="text" name="content">
+  <input type="submit" value="投稿する">
+</form> %>
+
+<%# Rubyでの書き方 %>
+<%= form_with url: "/posts", method: :post, local: true do |form| %>
+  <%= form.text_field :content %>
+  <%= form.submit '投稿する' %>
+<% end %>
